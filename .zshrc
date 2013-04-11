@@ -6,6 +6,8 @@
 #
 export LANG=ja_JP.UTF-8
 PATH=~/local/bin:$PATH
+export GEM_HOME=$HOME/lib/ruby/gem
+export RB_USER_INSTALL=true
 
 ## Default shell configuration
 #
@@ -89,6 +91,7 @@ alias where="command -v"
 # alias j="jobs -l"
 alias tmux='env LD_LIBRARY_PATH=$HOME/opt/libevent/lib ~/local/bin/tmux'
 alias tm="tmuxx"
+alias vi="vim"
 
 case "${OSTYPE}" in
 darwin*)
