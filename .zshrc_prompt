@@ -1,0 +1,12 @@
+# set prompt
+#
+autoload colors
+colors
+PROMPT="%{${fg[cyan]}%}{%n}%# %{${reset_color}%}%"
+PROMPT2="%{${fg[cyan]}%}{%n}> %{${reset_color}%}%"
+SPROMPT="%{${fg[cyan]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
+if [ $SSH_CONNECTION ]; then SSH="[${${(z)SSH_CONNECTION}[3]}]"; else SSH=""; fi
+PROMPT="%{${fg[white]}%}${HOST%%.*}${SSH}${PROMPT}"
+RPROMPT="%{${fg[white]}%}[%~]%{${reset_color}%}"
+#RPROMPT="%T"
+
